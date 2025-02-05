@@ -23,11 +23,11 @@ public class QnaService {
 
 
     public String getAnswer(String question) {
-        //construct the request payload
-        Map<String,Object> requestBody=Map.of(
-                "contents",new Object[]{
+        // Construct the request payload
+        Map<String, Object> requestBody = Map.of(
+                "contents", new Object[]{
                         Map.of(
-                                "parts",new Object[]{
+                                "parts", new Object[]{
                                         Map.of("text",question)
                                 }
                         )
