@@ -3,6 +3,7 @@ package com.ai.deeptalk.controller;
 import com.ai.deeptalk.services.QnaService;
 import lombok.AllArgsConstructor;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +17,7 @@ import java.util.Map;
 @RequestMapping("/api/query")
 public class DeepTalkController {
 
+    @Autowired
     private final QnaService qnAService;
 
     @PostMapping("/ask")

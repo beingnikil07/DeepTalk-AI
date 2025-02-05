@@ -9,44 +9,35 @@ import java.util.Map;
 @Service
 public class QnaService {
 
-    //Access the APIKEY and API URL
     @Value("${deeptalk.api.url}")
-    private String ApiUrl;
+    private String apiUrl;
+
     @Value("${deeptalk.api.key}")
-    private String ApiKey;
+    private String apiKey;
 
     private final WebClient webClient;
 
-    public QnaService(WebClient.Builder webClient) {
-        this.webClient = webClient.build();
+    public QnaService(WebClient.Builder webClientBuilder) {
+        this.webClient = webClientBuilder.build();
     }
 
-
     public String getAnswer(String question) {
-        // Construct the request payload
         Map<String, Object> requestBody = Map.of(
                 "contents", new Object[]{
                         Map.of(
                                 "parts", new Object[]{
-                                        Map.of("text",question)
+                                        Map.of("text", question)
                                 }
                         )
                 }
         );
 
-        //make API Calls
-        String response=webClient.post()
-                .uri(ApiUrl+ApiKey)
-                .header("Content-Type","application/json")
+        return webClient.post()
+                .uri(apiUrl + apiKey)
+                .header("Content-Type", "application/json")
                 .bodyValue(requestBody)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
-
-        //return response
-        return response;
     }
-
-
-
 }
