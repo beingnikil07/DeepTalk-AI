@@ -74,13 +74,28 @@ Ensure you have the following installed:
 ---
 ## 🤝 Contributing
 
+Want to improve EazySchool?  
+- Fork the repository
+- Create a new branch
+- Submit a Pull Request
+
 Contributions are welcome! Feel free to fork this repo and submit a pull request.
+
 
 ---
 
 ## 📜 License
 
 This project is licensed under the MIT License.
+
+---
+##  🙋‍♂️ Author
+
+**Nikil Kumar**  
+Java Backend Developer & AI Enthusiast  
+- GitHub: [github.com/beingnikil07](https://github.com/beingnikil07)  
+- LinkedIn: [linkedin.com/in/nikilkumar07](https://linkedin.com/in/nikilkumar07)  
+- Portfolio: [https://nikhilrana07.vercel.app/](https://nikhilrana07.vercel.app/)
 
 ---
 
